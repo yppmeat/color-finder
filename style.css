@@ -79,8 +79,11 @@ p {
   display: flex;
   justify-content: center;
   width: 100%;
-  opacity: 0;
-  transition: opacity 0.2s;
+  transition: bottom 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 
 .down div {
