@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>反対側の世界</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p>たんぽぽに行け。<br>合言葉は「茶黒紫゛緑」</p>
+  <div class="wrapper">
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <div class="white"></div>
+    <div class="blue"></div>
+    <div class="orange"></div>
+    <div class="blue"></div>
+    <div class="white"></div>
+    <div class="yellow"></div>
+    <div class="blue"></div>
+    <div class="white"></div>
+  </div>
+  <div class="hints">
+    <div class="hint white"></div>
+    <div class="reverse">⇔</div>
+    <div class="hint black"></div>
+  </div>
+  <div class="down" id="$down"><div>↓</div></div>
+  <script>
+    function check() {
+      $down.style.opacity = window.scrollY >= 20 ? '0' : '1';
+    }
+    check();
+    document.addEventListener('scroll', check);
+    $down.addEventListener('click', e => {
+      scrollTo(0, 150);
+    });
+  </script>
+</body>
+</html>
